@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-samen-eten-server",
+  "version": "1.0.0",
+  "description": "PR4 opdracht",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoeydeJongeAvans/NodeJS-samen-eten-server.git"
+  },
+  "keywords": [
+    "Node",
+    "PR4"
+  ],
+  "author": "Joey de Jonge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoeydeJongeAvans/NodeJS-samen-eten-server/issues"
+  },
+  "homepage": "https://github.com/JoeydeJongeAvans/NodeJS-samen-eten-server#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
