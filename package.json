@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/JoeydeJongeAvans/NodeJS-samen-eten-server.git"
   },
+  "engines": {
+    "node": "15.14.0"
+  },
   "keywords": [
     "Node",
     "PR4"
