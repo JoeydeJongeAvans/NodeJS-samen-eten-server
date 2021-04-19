@@ -1,6 +1,8 @@
 [
     {
-        "name": "Joey de Jonge",
-        "klas": "PR4"
+        "Studentnaam": "Joey de Jonge",
+        "Studentnummer": "2168547",
+        "Beschrijving": "Student aan Avans",
+        "Sonarqube URL": ""
     }
 ]
