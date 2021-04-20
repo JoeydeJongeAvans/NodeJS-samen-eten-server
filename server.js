@@ -1,4 +1,5 @@
 const express = require("express");
+var path = require('path');
 const app = express();
 const importData = require("./data.json");
 const studenthomes = require("./studentenhome.json");
@@ -8,7 +9,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("de RestAPI van PR4");
+    res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 app.get("/api/info", (req, res) => {
