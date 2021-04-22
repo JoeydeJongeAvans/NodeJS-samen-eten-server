@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/api/info", (req, res) => {
-    res.status(200).send(importData);
+    res.status(200).json(importData).end();
 });
 
 app.post("/api/studenthome", (req, res) => {
@@ -29,7 +29,7 @@ app.post("/api/studenthome", (req, res) => {
 
     if (studenhome) {
         studenthomes.push(studenhome);
-        res.status(201).send(studenhome);
+        res.status(201).json(studenhome).end();
     }
     res.status(400).send("Didnt work lmao");
 });
@@ -42,7 +42,7 @@ app.delete("/api/studenthome", (req, res) => {
     if (homeId) {
         post = studenthomes.find((post) => post.homeid === homeid);
         if (post)
-            res.status(202).send(post);
+            res.status(202).json(post).end();
         else
             res.status(400).send(`Can't delete studenthome`);
     }
@@ -56,7 +56,7 @@ app.get("/api/studenthome", (req, res) => {
     var post;
     if (homeId) {
         post = studenthomes.find((post) => post.homeid === homeid);
-        if (post) res.status(200).send(post);
+        if (post) res.status(200).json(post).end();
         else res.status(404).send(`Not Found`);
     }
 });
@@ -78,7 +78,7 @@ app.put("/api/studenthome/:homeid", (req, res) => {
     studenthomes[index] = studenthome;
 
     res.json(studenthomes[index]);
-    res.status(201).send(studenthome);
+    res.status(201).json(studenthome).end();
 });
 
 //Zoeken op Naam - plaats
@@ -102,10 +102,10 @@ app.get("/api/studenthome", (req, res) => {
         }
     }
     if (post2 != null) {
-        res.status(200).send(post2);
+        res.status(200).json(post2).end();
     } else {
         if (post != null) {
-            res.status(200).send(post);
+            res.status(200).json(post).end();
         } else {
             res.status(404).send("Not Found");
         }
