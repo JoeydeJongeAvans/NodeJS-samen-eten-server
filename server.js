@@ -57,7 +57,7 @@ app.get("/api/studenthome", (req, res) => {
     if (homeId) {
         post = studenthomes.find((post) => post.homeid === homeid);
         if (post) res.status(200).send(post);
-        else res.status(400).send(`Not Found`);
+        else res.status(404).send(`Not Found`);
     }
 });
 
